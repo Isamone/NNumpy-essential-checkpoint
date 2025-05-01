@@ -1,0 +1,55 @@
+The objective  is to utilize the NumPy library to perform detailed analysis on a dataset of student grades. 
+This includes calculating statistical measures, identifying trends, and extracting subsets of data to understand 
+the performance and achievements of students within a specific grading scale.
+
+
+Instructions
+
+Create a numpy array called "grades" that contains the following grades: [85, 90, 88, 92, 95, 80, 75, 98, 89, 83]
+
+Import the numpy library and create the "grades" array as specified above.
+Use numpy functions to calculate the mean, median, and standard deviation of the grades.
+Use numpy function to find the maximum and minimum of the grades.
+Use numpy function to sort the grades in ascending order.
+Use numpy function to find the index of the highest grade in the array.
+Use numpy function to count the number of students who scored above 90.
+Use numpy function to calculate the percentage of students who scored above 90.
+Use numpy function to calculate the percentage of students who scored below 75.
+Use numpy function to extract all the grades above 90 and put them in a new array called "high_performers".
+Create a new array called "passing_grades" that contains all the grades above 75.
+Print the result of all the above steps.
+Note:
+
+to calculate percentage use numpy.mean(grades > 90) * 100
+to extract the grades above 90 use grades[grades > 90]
+to extract the grades above 75 use grades[grades > 75]
+You can use other numpy functions as well to analyze the data as you want. The above steps are just examples of what can be
+done.
+
+Answer:
+
+Grade = np.array([85, 90, 88, 92, 95, 80, 75, 98, 89, 83])
+mean = np.mean(Grade)
+median = np.median(Grade)
+standard_d = np.std(Grade)
+minimum = np.min(Grade)
+maximum = np.max(Grade)
+sorted_grades= np.sort(Grade)
+highest = np.argmax(Grade)
+count = np.count_nonzero(Grade>90)
+percentage_90= np.mean(Grade>90)*100
+percentage_75 = np.mean(Grade>75)*100
+High_performer=Grade[Grade>90]
+passing_grades = Grade[Grade>75]
+print(Grade)
+print(mean)
+print(median)
+print(standard_d)
+print(minimum, maximum)
+print(sorted_grades)
+print(highest)
+print(count)
+print(percentage_90)
+print(percentage_75)
+print(High_performer)
+print(passing_grades)
